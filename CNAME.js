@@ -1,1 +1,1 @@
-uxcheck.co
+www.uxcheck.co
