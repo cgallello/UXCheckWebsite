@@ -15,6 +15,15 @@
       ga('send', 'pageview');
 
     </script>
+    <script>
+    var trackOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+         function () {
+         document.location = url;
+         }
+       });
+    }
+    </script>
   </head>
   <body>
     <div class="background_grouping_dark">
@@ -22,7 +31,7 @@
         <h1>UX CHECK</h1>
         <h2>Improve your website's UX.</h2>
         <p>UX Check is a Chrome Extension that helps you identify design issues through a heuristic evaluation.</p>
-        <a class="install_button" href="#"  target="_blank">
+        <a class="install_button" href="#" onclick="trackOutboundLink('#'); return false;"  target="_blank">
           <div>Install Extension</div>
           <img src="chromelogo.png" />
         </a>
@@ -64,7 +73,7 @@
         <h3>A lightweight evaluation that allows you to identify usability issues without the involvement of users.</h3>
         <p>In the 90's Jakob Nielsen put together a list of ten heuristics, or principles, that websites should adhere to. These heuristics are still very relevant today, and allow you analyze your website fairly cheaply relative to the cost of a user test.</p>
         <p>As a developer or designer, you should regard heuristic evaluations as an inexpensive sanity test to easily identify potential problems. Walk through your website and take a note of any UI elements that break any of Nielsen's 10 heuristics.</p>
-        <p>Visit the Nielsen Norman Group's website for more articles on heuristic evaluations: <a href="http://www.nngroup.com/topic/heuristic-evaluation/"  target="_blank">http://www.nngroup.com/topic/heuristic-evaluation/</a></p>
+        <p>Visit the Nielsen Norman Group's website for more articles on heuristic evaluations: <a href="http://www.nngroup.com/topic/heuristic-evaluation/"  target="_blank" onclick="trackOutboundLink('http://www.nngroup.com/topic/heuristic-evaluation/'); return false;" >http://www.nngroup.com/topic/heuristic-evaluation/</a></p>
       </div>
       <div id="definitions_container">
         <div id="definitions_header_container">
@@ -121,13 +130,13 @@
       </div>
     </div>
     <div id="footer" class="background_grouping_dark">
-      <a class="install_button" href="*"  target="_blank">
+      <a class="install_button" href="*"  target="_blank" onclick="trackOutboundLink('#'); return false;" >
         <div>Install Extension</div>
         <img src="chromelogo.png" />
       </a>
       <p>UX Check was made by Chris Gallello in Seattle.</p>
       <p>Machine wash cold.</p>
-      <div style="margin-top:10px;"><a href="http://twitter.com/cgallello" target="_blank">@cgallello</a></div>
+      <div style="margin-top:10px;"><a href="http://twitter.com/cgallello" target="_blank" onclick="trackOutboundLink('http://twitter.com/cgallello'); return false;" >@cgallello</a></div>
     </div>
   </body>
 </html>
