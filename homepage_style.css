@@ -1,0 +1,313 @@
+@font-face {
+    font-family: AvenirLight;
+    src: url(Avenir-Light.otf);
+}
+
+@font-face {
+    font-family: AvenirBlack;
+    src: url(Avenir-Black.otf);
+}
+
+@font-face {
+    font-family: AvenirLightOblique;
+    src: url(Avenir-LightOblique.otf);
+}
+
+
+html, body{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  font-family: AvenirLight, Arial, sans-serif;
+  color:white;
+  text-align: center;
+}
+
+h1,h2{
+  font-family: AvenirBlack;
+}
+
+h3{
+  font-family: AvenirLight;
+}
+
+.background_grouping_dark {
+  width:100%;
+  padding:100px 0px;
+  background-color:rgb(40,40,40);
+}
+#title_group {
+  width:375px;
+  margin: 0 auto;
+  padding:0 150px 40px 150px;
+  border: 1px solid rgb(150,150,150);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+#title_group h1 {
+  margin:0;
+  margin-top:-21px;
+  background-color:rgb(40,40,40);
+  display:inline-block;
+  padding:0px 20px;
+}
+#title_group h2 {
+  font-size:16px;
+  margin:0;
+}
+#title_group p {}
+
+.install_button {
+  margin-top:15px;
+  background-color:white;
+  color:rgb(40,40,40);
+  padding:10px 20px;
+  display:inline-block;
+  font-family: AvenirBlack;
+  font-size:14px;
+  text-decoration:none 
+}
+.install_button:hover{
+  background-color:rgb(220,220,255);
+}
+.install_button div{
+  display:inline-block;
+  vertical-align: middle;
+  padding-top:3px;
+  margin-right:20px;
+}
+.install_button img{
+  display:inline-block;
+  vertical-align: middle;
+  width:30px;
+}
+#walkthrough_container {
+  width:890px;
+  margin: 0 auto;
+  margin-top:80px;
+  text-align: center;
+}
+#walkthrough_container h2 {
+  margin-bottom:30px;
+}
+
+#arrow_and_image_container{
+  display:block;
+}
+
+#left_arrow{
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right:20px solid rgb(68,68,68);
+  display:inline-block;
+  margin-right:20px;
+  vertical-align: middle;
+}
+
+#right_arrow{
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 20px solid rgb(168,168,168);
+  display:inline-block;
+  margin-left:20px;
+  vertical-align: middle;
+}
+
+#walkthrough_image {
+  display:inline-block;
+  width:800px;
+  height:500px;
+  vertical-align: middle;
+  position:relative;
+  padding:0;
+}
+
+#walkthrough_image img{
+  width:800px;
+  position:absolute;
+  left:0;
+  top:0;
+  margin:0;
+}
+
+#left_arrow {}
+.arrow{}
+#right_arrow {}
+
+#walkthrough_description{
+  position:relative;
+}
+#walkthrough_description span{
+  position:absolute;
+  left:0;
+  top:0;
+  text-align: center;
+  width:100%;
+}
+
+#progress{
+  margin-top:45px;
+}
+
+.circle{
+  border:1px solid white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width:10px;
+  height:10px;
+  display:inline-block;
+  margin:0 10px;
+}
+
+.label{
+  display:inline-block;
+  padding:5px 10px;
+  border: 1px solid rgb(150,150,150);
+}
+
+.label:hover{
+  cursor:pointer;
+}
+
+.selected{
+  background-color:rgba(255,255,255,0.2);
+}
+
+.background_grouping_light {
+  width:100%;
+  padding:40px 0px;
+  background-color:rgb(68,68,68);
+}
+
+#explainer_group {
+  width:550;
+  margin:0 auto;
+}
+
+#explainer_group h3 {
+  margin:30px 0;
+}
+
+#explainer_group p {
+  text-align:left;
+}
+
+#explainer_group a {
+  color:white;
+  text-decoration: none;
+}
+#explainer_group a:hover {
+  color:#BFD2FF;
+}
+
+#definitions_container {
+  width:850px;
+  height:500px;
+  margin: 0 auto;
+  margin-top:80px;
+
+  border: 1px solid rgb(150,150,150);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+#definitions_header_container{
+  margin:0;
+  margin-top:-16px;
+  display:block;
+}
+
+#definitions_container h2 {
+  margin:0;
+  background-color:rgb(68,68,68);
+  display:inline-block;
+  padding:0px 20px;
+}
+
+#heuristics_container {
+  text-align: left;
+  padding:50px;
+  width:250px;
+  vertical-align: middle;
+  float:left;
+}
+
+#heuristics_container div {
+  padding:5px 10px;
+  margin:5px 0;
+}
+
+#heuristics_container div:hover {
+  cursor:pointer;
+}
+
+#v_bar {
+  margin-top:50px;
+  height:400px;
+  width:1px;
+  background-color:rgb(150,150,150);
+  float:left;
+  margin-right:5px;
+}
+
+#definition_container {
+  width:410px;
+  margin:0 40px;
+  height:470px;
+  display:table;
+  float:left;
+}
+
+#hover_instruction_text {
+  vertical-align:middle;
+  display:table-cell;
+  text-align: left;
+}
+
+#instruction{
+  text-align:center;
+  color:rgb(181,181,181);
+}
+
+#footer {
+  padding-bottom:200px;
+}
+#footer h1 {
+  padding:0;
+  margin:0;
+}
+
+#footer h2 {
+  font-size:16px;
+  margin:0;
+}
+
+#footer .install_button{
+  margin-top:-30px;
+  margin-bottom:50px;
+}
+
+#footer .install_button div{
+  color:rgb(40,40,40);
+}
+
+#footer p {
+  margin:0;
+}
+#footer a {
+  color:white;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color:#BFD2FF;
+}

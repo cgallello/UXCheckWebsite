@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>UX Check</title>
+    <link rel="stylesheet" type="text/css" href="homepage_style.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="homepage.js"></script>
+  </head>
+  <body>
+    <div class="background_grouping_dark">
+      <div id="title_group">
+        <h1>UX CHECK</h1>
+        <h2>Improve your website's UX.</h2>
+        <p>UX Check is a Chrome Extension that helps you identify design issues through a heuristic evaluation.</p>
+        <a class="install_button" href="#"  target="_blank">
+          <div>Install Extension</div>
+          <img src="chromelogo.png" />
+        </a>
+      </div>
+      <div id="walkthrough_container">
+        <h2>HERE'S HOW IT WORKS</h2>
+        <div id"arrow_and_image_container">
+          <div id="left_arrow"></div>
+          <span id="walkthrough_image">
+            <img src="images/mockups_03.png" style="display:block;" />
+            <img src="images/mockups_05.png" style="display:none;" />
+            <img src="images/mockups_06.png" style="display:none;" />
+            <img src="images/mockups_07.png" style="display:none;" />
+          </span>
+          <div id="right_arrow"></div>
+        </div>
+        <div id="walkthrough_description">
+          <span style="display:block;">UX Check adds a pane next to your website. The pane shows Nielsen's 10 heuristics to help you identify issues.</span>
+          <span style="display:none;">When you identify an issue, click on the  relevant element.</span>
+          <span style="display:none;">Then annotate it with your notes. A screenshot of the UI will be saved.</span>
+          <span style="display:none;">When you’re done, your results (with screenshots) are exported as a Word doc.</span>
+        </div>
+
+        <div id="progress">
+          <div class="label selected">Open pane</div>
+          <div class="label">Identify</div>
+          <div class="label">Annotate</div>
+          <div class="label">Export</div>
+          <!--<div class="circle selected"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>-->
+        </div>
+      </div>
+    </div>
+    <div class="background_grouping_light">
+      <div id="explainer_group">
+        <h2>WHAT IS A HEURISTIC EVALUATION?</h2>
+        <h3>A lightweight evaluation that allows you to identify usability issues without the involvement of users.</h3>
+        <p>In the 90's Jakob Nielsen put together a list of ten heuristics, or principles, that websites should adhere to. These heuristics are still very relevant today, and allow you analyze your website fairly cheaply relative to the cost of a user test.</p>
+        <p>As a developer or designer, you should regard heuristic evaluations as an inexpensive sanity test to easily identify potential problems. Walk through your website and take a note of any UI elements that break any of Nielsen's 10 heuristics.</p>
+        <p>Visit the Nielsen Norman Group's website for more articles on heuristic evaluations: <a href="http://www.nngroup.com/topic/heuristic-evaluation/"  target="_blank">http://www.nngroup.com/topic/heuristic-evaluation/</a></p>
+      </div>
+      <div id="definitions_container">
+        <div id="definitions_header_container">
+          <h2>NIELSEN'S TEN HEURISTICS</h2>
+        </div>
+        <div id="heuristics_container">
+          <div class="heuristic" id="0">Visibility of system status</div>
+          <div class="heuristic" id="1">Match between system and the real world</div>
+          <div class="heuristic" id="2">User control and freedom</div>
+          <div class="heuristic" id="3">Consistency and standards</div>
+          <div class="heuristic" id="4">Error prevention</div>
+          <div class="heuristic" id="5">Recognition rather than recall</div>
+          <div class="heuristic" id="6">Flexibility and efficiency of use</div>
+          <div class="heuristic" id="7">Aesthetic and minimalist design</div>
+          <div class="heuristic" id="8">Help users recognize, diagnose, and recover from errors</div>
+          <div class="heuristic" id="9">Help and documentation</div>
+        </div>
+        <div id="v_bar"></div>
+        <div id="definition_container">
+          <div id="hover_instruction_text">
+            <div id="instruction">Hover over a heuristic on the left.</div>
+            <div style="display:none;">
+              The system should always keep users informed about what is going on, through appropriate feedback within reasonable time.
+            </div>
+            <div style="display:none;">
+              The system should speak the users' language, with words, phrases and concepts familiar to the user, rather than system-oriented terms. Follow real-world conventions, making information appear in a natural and logical order.
+            </div>
+            <div style="display:none;">
+              Users often choose system functions by mistake and will need a clearly marked "emergency exit" to leave the unwanted state without having to go through an extended dialogue. Support undo and redo.
+            </div>
+            <div style="display:none;">
+              Users should not have to wonder whether different words, situations, or actions mean the same thing. Follow platform conventions.
+            </div>
+            <div style="display:none;">
+              Even better than good error messages is a careful design which prevents a problem from occurring in the first place. Either eliminate error-prone conditions or check for them and present users with a confirmation option before they commit to the action.
+            </div>
+            <div style="display:none;">
+              Minimize the user's memory load by making objects, actions, and options visible. The user should not have to remember information from one part of the dialogue to another. Instructions for use of the system should be visible or easily retrievable whenever appropriate.
+            </div>
+            <div style="display:none;">
+              Accelerators -- unseen by the novice user -- may often speed up the interaction for the expert user such that the system can cater to both inexperienced and experienced users. Allow users to tailor frequent actions.
+            </div>
+            <div style="display:none;">
+              Dialogues should not contain information which is irrelevant or rarely needed. Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility.
+            </div>
+            <div style="display:none;">
+              Error messages should be expressed in plain language (no codes), precisely indicate the problem, and constructively suggest a solution.
+            </div>
+            <div style="display:none;">
+              Even though it is better if the system can be used without documentation, it may be necessary to provide help and documentation. Any such information should be easy to search, focused on the user's task, list concrete steps to be carried out, and not be too large.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer" class="background_grouping_dark">
+      <a class="install_button" href="*"  target="_blank">
+        <div>Install Extension</div>
+        <img src="chromelogo.png" />
+      </a>
+      <p>UX Check was made by Chris Gallello in Seattle.</p>
+      <p>Machine wash cold.</p>
+      <div style="margin-top:10px;"><a href="http://twitter.com/cgallello" target="_blank">@cgallello</a></div>
+    </div>
+  </body>
+</html>
+
