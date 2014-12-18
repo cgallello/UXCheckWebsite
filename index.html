@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>UX Check</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="homepage_style.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="homepage.js"></script>
@@ -28,31 +29,40 @@
   <body>
     <div class="background_grouping_dark">
       <div id="title_group">
-        <h1>UX CHECK</h1>
-        <h2>Improve your website's UX.</h2>
-        <p>UX Check is a Chrome Extension that helps you identify design issues through a heuristic evaluation.</p>
-        <a class="install_button" href="#" onclick="trackOutboundLink('#'); return false;"  target="_blank">
-          <div>Install Extension</div>
-          <img src="chromelogo.png" />
-        </a>
+        <div id="title_group_text_holder">
+          <h1>UX CHECK</h1>
+          <h2>Improve your website's UX.</h2>
+          <p>UX Check is a Chrome Extension that helps you identify design issues through a heuristic evaluation.</p>
+          <a class="install_button" href="#" onclick="trackOutboundLink('#'); return false;"  target="_blank">
+            <div>Install Extension</div>
+            <img src="chromelogo.png" />
+          </a>
+          <p id="free">Free for personal & commercial use</p>
+        </div>
       </div>
       <div id="walkthrough_container">
         <h2>HERE'S HOW IT WORKS</h2>
         <div id"arrow_and_image_container">
-          <div id="left_arrow"></div>
+          <div id="leftinactive" class="left_arrow"></div>
           <span id="walkthrough_image">
-            <img src="images/mockups_03.png" style="display:block;" />
-            <img src="images/mockups_05.png" style="display:none;" />
-            <img src="images/mockups_06.png" style="display:none;" />
-            <img src="images/mockups_07.png" style="display:none;" />
+            <div class="slide" id="slide1" style="display:block;">
+              <div class="background_image"></div>
+              <span>UX Check adds a pane next to your website. The pane shows Nielsen's 10 heuristics to help you identify issues.</span>
+            </div>
+            <div class="slide hidden" id="slide2">
+              <div class="background_image"></div>
+              <span>When you identify an issue, click on the  relevant element.</span>
+            </div>
+            <div class="slide hidden" id="slide3">
+              <div class="background_image"></div>
+              <span>Then annotate it with your notes. A screenshot of the UI will be saved.</span>
+            </div>
+            <div class="slide hidden" id="slide4">
+              <div class="background_image"></div>
+              <span>When you're done, your results (with screenshots) are exported as a Word doc.</span>
+            </div>
           </span>
-          <div id="right_arrow"></div>
-        </div>
-        <div id="walkthrough_description">
-          <span style="display:block;">UX Check adds a pane next to your website. The pane shows Nielsen's 10 heuristics to help you identify issues.</span>
-          <span style="display:none;">When you identify an issue, click on the  relevant element.</span>
-          <span style="display:none;">Then annotate it with your notes. A screenshot of the UI will be saved.</span>
-          <span style="display:none;">When you’re done, your results (with screenshots) are exported as a Word doc.</span>
+          <div id="rightactive" class="right_arrow"></div>
         </div>
 
         <div id="progress">
@@ -77,8 +87,53 @@
       </div>
       <div id="definitions_container">
         <div id="definitions_header_container">
-          <h2>NIELSEN'S TEN HEURISTICS</h2>
+          <h2><span id="nielsen">NIELSEN'S TEN</span><span id="the">THE</span> HEURISTICS</h2>
         </div>
+
+        <div id="mobile_heuristics">
+          <div class="mobile_heuristic">Visibility of system status</div>
+          <div class="mobile_definition">
+            The system should always keep users informed about what is going on, through appropriate feedback within reasonable time.
+          </div>
+          <div class="mobile_heuristic">Match between system and the real world</div>
+          <div class="mobile_definition">
+            The system should speak the users' language, with words, phrases and concepts familiar to the user, rather than system-oriented terms. Follow real-world conventions, making information appear in a natural and logical order.
+          </div>
+          <div class="mobile_heuristic">User control and freedom</div>
+          <div class="mobile_definition">
+              Users often choose system functions by mistake and will need a clearly marked "emergency exit" to leave the unwanted state without having to go through an extended dialogue. Support undo and redo.
+            </div>
+          <div class="mobile_heuristic">Consistency and standards</div>
+          <div class="mobile_definition">
+            Users should not have to wonder whether different words, situations, or actions mean the same thing. Follow platform conventions.
+          </div>
+          <div class="mobile_heuristic">Error prevention</div>
+          <div class="mobile_definition">
+            Even better than good error messages is a careful design which prevents a problem from occurring in the first place. Either eliminate error-prone conditions or check for them and present users with a confirmation option before they commit to the action.
+          </div>
+          <div class="mobile_heuristic">Recognition rather than recall</div>
+          <div class="mobile_definition">
+            Minimize the user's memory load by making objects, actions, and options visible. The user should not have to remember information from one part of the dialogue to another. Instructions for use of the system should be visible or easily retrievable whenever appropriate.
+          </div>
+          <div class="mobile_heuristic">Flexibility and efficiency of use</div>
+          <div class="mobile_definition">
+            Accelerators -- unseen by the novice user -- may often speed up the interaction for the expert user such that the system can cater to both inexperienced and experienced users. Allow users to tailor frequent actions.
+          </div>
+          <div class="mobile_heuristic">Aesthetic and minimalist design</div>
+          <div class="mobile_definition">
+            Dialogues should not contain information which is irrelevant or rarely needed. Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility.
+          </div>
+          <div class="mobile_heuristic">Help users recognize, diagnose, and 
+            recover from errors</div>
+          <div class="mobile_definition">
+            Error messages should be expressed in plain language (no codes), precisely indicate the problem, and constructively suggest a solution.
+          </div>
+          <div class="mobile_heuristic">Help and documentation</div>
+          <div class="mobile_definition">
+            Even though it is better if the system can be used without documentation, it may be necessary to provide help and documentation. Any such information should be easy to search, focused on the user's task, list concrete steps to be carried out, and not be too large.
+          </div>
+        </div>
+
         <div id="heuristics_container">
           <div class="heuristic" id="0">Visibility of system status</div>
           <div class="heuristic" id="1">Match between system and the real world</div>
@@ -91,7 +146,9 @@
           <div class="heuristic" id="8">Help users recognize, diagnose, and recover from errors</div>
           <div class="heuristic" id="9">Help and documentation</div>
         </div>
+
         <div id="v_bar"></div>
+
         <div id="definition_container">
           <div id="hover_instruction_text">
             <div id="instruction">Hover over a heuristic on the left.</div>
@@ -126,6 +183,7 @@
               Even though it is better if the system can be used without documentation, it may be necessary to provide help and documentation. Any such information should be easy to search, focused on the user's task, list concrete steps to be carried out, and not be too large.
             </div>
           </div>
+
         </div>
       </div>
     </div>

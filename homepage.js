@@ -1,10 +1,13 @@
 $(document).ready(function () {
+	window.left_arrow_active = false;
+	window.right_arrow_active = false;
 
 	// If right arrow is clicked
 
-		$('#right_arrow').click(function(){
-			var initially_visible = $('#walkthrough_image > img:visible');
+		$('.right_arrow').click(function(){
+			var initially_visible = $('#walkthrough_image > .slide:visible');
 			var initially_hidden = initially_visible.next();
+			console.log(initially_hidden.next().length);
 			var index = initially_hidden.index();
 			if (initially_hidden.length){
 				initially_hidden.fadeIn(200,function(){
@@ -16,8 +19,8 @@ $(document).ready(function () {
 
 	// If left arrow is clicked
 
-		$('#left_arrow').click(function(){
-			var initially_visible = $('#walkthrough_image > img:visible');
+		$('.left_arrow').click(function(){
+			var initially_visible = $('#walkthrough_image > .slide:visible');
 			var initially_hidden = initially_visible.prev();
 			var index = initially_hidden.index();
 			if (initially_hidden.length){
@@ -34,8 +37,8 @@ $(document).ready(function () {
 		$('.label').click(function(){
 			if ($(this).attr('class') == 'label'){
 				var index = $(this).index();
-				var initially_visible = $('#walkthrough_image > img:visible');
-				var initially_hidden = $('#walkthrough_image > img:nth-child('+(index+1)+')');
+				var initially_visible = $('#walkthrough_image > .slide:visible');
+				var initially_hidden = $('#walkthrough_image > .slide:nth-child('+(index+1)+')');
 				$(this).siblings().css('background-color','');
 				initially_hidden.fadeIn(200,function(){
 					initially_visible.fadeOut();
@@ -57,12 +60,12 @@ $(document).ready(function () {
 		});
 
 	// On hover of right arrow
-
-		$('#right_arrow').hover(function(){
+/*
+		$('.right_arrow').hover(function(){
 			// if active
-			if($(this).css('border-left') == '20px solid rgb(168, 168, 168)'){
+			if($(this).attr('class') == 'rightactive'){
 				window.right_arrow_active = true;
-				$(this).css({'border-left':'20px solid rgb(220, 220, 220)','cursor':'pointer'});	
+				$(this).attr('class');	
 			} else {
 				window.right_arrow_active = false;
 			}
@@ -74,19 +77,19 @@ $(document).ready(function () {
 
 	// On hover of left arrow
 		
-		$('#left_arrow').hover(function(){
+		$('.left_arrow').hover(function(){
 			// if active
 			if($(this).css('border-right') == '20px solid rgb(168, 168, 168)'){
 				window.left_arrow_active = true;
 				$(this).css({'border-right':'20px solid rgb(220, 220, 220)','cursor':'pointer'});	
 			} else {
-				window.left_arrow_active = true;
+				window.left_arrow_active = false;
 			}
 		}, function(){
-			if (window.right_arrow_active){
+			if (window.left_arrow_active){
 				$(this).css({'border-right':'20px solid rgb(168, 168, 168)','cursor':'default'});
 			}
-		});
+		});*/
 
 	$('#heuristics_container div').hover(function(){
 		$('#heuristics_container div').css('background-color', 'rgba(0,0,0,0)');
@@ -102,20 +105,24 @@ $(document).ready(function () {
 
 	function update_arrows(new_img, index){
 
-		if (new_img.next().length){
+		if (new_img.next().length > 0){
 			//right arrow is active
-			$('#right_arrow').css('border-left','20px solid rgb(168,168,168)');
+			$('.right_arrow').attr('id','rightactive');
+			//$('.right_arrow').css('border-left','20px solid rgb(168,168,168)');
 		} else {
 			//right arrow is inactive
-			$('#right_arrow').css('border-left','20px solid rgb(68,68,68)');
+			$('.right_arrow').attr('id','rightinactive');
+			//$('.right_arrow').css('border-left','20px solid rgb(68,68,68)');
 		}
 
-		if (new_img.prev().length){
+		if (new_img.prev().length > 0){
 			//left arrow is active
-			$('#left_arrow').css('border-right','20px solid rgb(168,168,168)');
+			$('.left_arrow').attr('id','leftactive');
+			//$('.left_arrow').css('border-right','20px solid rgb(168,168,168)');
 		} else {
 			//left arrow is inactive
-			$('#left_arrow').css('border-right','20px solid rgb(68,68,68)');
+			$('.left_arrow').attr('id','leftinactive');
+			//$('.left_arrow').css('border-right','20px solid rgb(68,68,68)');
 		}
 
 		// Update description
