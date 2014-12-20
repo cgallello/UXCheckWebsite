@@ -72,8 +72,19 @@ h3{
 }
 
 #free{
-  margin-top:25px;
+  margin-top:20px;
   font-size:13px;
+}
+
+#medium{
+  font-size:14px;
+  margin-top:15px;
+  color:white
+}
+
+#medium:active{
+  margin-top:10px;
+  color:white;
 }
 
 .install_button {
